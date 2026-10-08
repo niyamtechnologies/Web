@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Niyam Tech Inc. | Enterprise AI Consulting, Canada</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f7fb;--card:#fff;--tx:#0b1424;--mu:#51607a;--ln:#d5deeb;--a:#0a7cff;--b:#00b8a9;--glow:rgba(10,124,255,.12)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060b16;--card:#0d1526;--tx:#e8f0ff;--mu:#8fa3c4;--ln:#1c2a47;--a:#3d9bff;--b:#1de9d0;--glow:rgba(61,155,255,.16)}}
+:root[data-theme="dark"]{--bg:#060b16;--card:#0d1526;--tx:#e8f0ff;--mu:#8fa3c4;--ln:#1c2a47;--a:#3d9bff;--b:#1de9d0;--glow:rgba(61,155,255,.16)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
+.logo{font-weight:800;letter-spacing:.04em;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;cursor:pointer;white-space:nowrap}
+nav{display:flex;gap:4px;overflow-x:auto}
+nav button{background:none;border:0;color:var(--mu);font:inherit;font-size:14px;padding:6px 10px;border-radius:8px;cursor:pointer;white-space:nowrap}
+nav button.on,nav button:hover{color:var(--tx);background:var(--glow)}
+main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 5vw 60px}
+.view{display:none;animation:in .5s ease}.view.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero{padding:9vh 0 6vh}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--b);border:1px solid var(--ln);padding:5px 12px;border-radius:99px}
+h1{font-size:clamp(2.2rem,6.5vw,4.2rem);line-height:1.08;margin:18px 0;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);margin:44px 0 8px}
+.g{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+p.lead{color:var(--mu);font-size:1.12rem;max-width:660px}
+.btn{display:inline-block;margin:10px 10px 0 0;padding:13px 24px;border-radius:10px;font:inherit;font-weight:600;border:1px solid var(--a);cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--a),var(--b))}
+.btn.o{background:none;color:var(--tx)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:22px;transition:.25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:var(--a);box-shadow:0 10px 40px var(--glow)}
+.card h3{margin:0 0 8px;font-size:1.1rem}.card p{margin:0;color:var(--mu);font-size:.95rem}
+.ic{font-size:22px;color:var(--b);margin-bottom:10px;font-family:monospace}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--ln);color:var(--mu)}
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:22px}
+.step{display:flex;gap:18px;background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:20px}
+.step:before{counter-increment:s;content:"0" counter(s);font:700 1.6rem monospace;color:var(--a)}
+.step h3{margin:0 0 4px}.step p{margin:0;color:var(--mu)}
+form{display:grid;gap:12px;margin-top:20px;max-width:560px}
+input,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid var(--ln);background:var(--card);color:var(--tx);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--a)}
+footer{position:relative;z-index:1;text-align:center;color:var(--mu);font-size:13px;padding:26px 5vw;border-top:1px solid var(--ln)}
+</style></head><body>
+<canvas id="fx"></canvas>
+<header><span class="logo" data-go="home">NIYAM TECH</span>
+<nav><button data-go="home" class="on">Home</button><button data-go="services">Services</button><button data-go="approach">Approach</button><button data-go="industries">Industries</button><button data-go="contact">Contact</button></nav></header>
+<main>
+<section class="view on" id="home"><div class="hero">
+<span class="tag">Canadian AI Consultancy</span>
+<h1>Production-grade AI for <span class="g">mission-critical enterprise</span></h1>
+<p class="lead">Niyam Tech Inc. designs, optimizes and safely deploys AI systems, from generative AI platforms to real-time edge inference, with engineering rigor built for regulated, high-stakes environments.</p>
+<a class="btn" data-go="contact">Book a Strategy Call</a><a class="btn o" data-go="services">Explore Services</a></div>
+<div class="grid">
+<div class="card"><div class="ic">&lt;/&gt;</div><h3>Engineering-first</h3><p>Deep systems expertise from silicon-level optimization to cloud-scale ML pipelines.</p></div>
+<div class="card"><div class="ic">&#9670;</div><h3>Safety &amp; compliance minded</h3><p>Functional-safety practices and coding-standard discipline for AI in critical systems.</p></div>
+<div class="card"><div class="ic">&#9679;</div><h3>Canadian-based</h3><p>Privacy-conscious delivery aligned with Canadian data protection expectations.</p></div></div>
+</section>
+
+<section class="view" id="services"><h2>Our <span class="g">Services</span></h2>
+<p class="lead">End-to-end AI capabilities, from strategy to certified, scalable production.</p>
+<div class="grid">
+<div class="card"><div class="ic">01</div><h3>Generative AI &amp; LLM Engineering</h3><p>Transformer-based solutions (GPT- and LLaMA-class models): adaptation, retrieval-augmented systems, evaluation and inference optimization.</p><div class="chips"><span>LLMs</span><span>Transformers</span><span>Multimodal</span></div></div>
+<div class="card"><div class="ic">02</div><h3>Deep Learning &amp; Model Development</h3><p>Custom CNN, LSTM and neural architectures built in TensorFlow, Keras and PyTorch for vision, sequence and signal problems.</p><div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span></div></div>
+<div class="card"><div class="ic">03</div><h3>Edge AI &amp; Inference Acceleration</h3><p>Quantization, pruning and runtime tuning to run models efficiently on accelerators, NPUs and resource-constrained SoCs.</p><div class="chips"><span>Quantization</span><span>NPUs</span><span>CUDA</span></div></div>
+<div class="card"><div class="ic">04</div><h3>Computer Vision &amp; Perception</h3><p>Object detection and perception pipelines using camera and point-cloud data for autonomous and industrial applications.</p><div class="chips"><span>Detection</span><span>Point cloud</span><span>ADAS-grade</span></div></div>
+<div class="card"><div class="ic">05</div><h3>AI Runtimes &amp; ML Operators</h3><p>Custom operator development, SDK engineering and deployment tooling in modern C++ for accelerator hardware.</p><div class="chips"><span>C++</span><span>SDKs</span><span>Operators</span></div></div>
+<div class="card"><div class="ic">06</div><h3>Functional Safety for AI Systems</h3><p>ISO 26262-aligned analysis (FMEA, FTA) and AUTOSAR C++ compliant development for safety-critical software.</p><div class="chips"><span>ISO 26262</span><span>FMEA / FTA</span><span>AUTOSAR C++</span></div></div>
+<div class="card"><div class="ic">07</div><h3>Embedded &amp; Real-Time Systems</h3><p>RTOS, firmware and middleware on ARM and NXP-class microcontrollers, with CAN, SPI, I2C, Ethernet and serial integration.</p><div class="chips"><span>RTOS</span><span>Firmware</span><span>ROS/ROS2</span></div></div>
+<div class="card"><div class="ic">08</div><h3>MLOps &amp; CI/CD</h3><p>Automated testing, continuous integration and deployment pipelines so AI systems stay reliable after launch.</p><div class="chips"><span>CI/CD</span><span>Testing</span><span>Linux</span></div></div>
+</div></section>
+
+<section class="view" id="approach"><h2>Our <span class="g">Approach</span></h2>
+<p class="lead">A transparent, milestone-driven process built for enterprise governance.</p>
+<div class="steps">
+<div class="step"><div><h3>Discover</h3><p>Align on business goals, constraints, data readiness and risk profile.</p></div></div>
+<div class="step"><div><h3>Architect</h3><p>Design the target system, select models and hardware, and define success metrics.</p></div></div>
+<div class="step"><div><h3>Build &amp; Validate</h3><p>Iterative development with rigorous testing, safety analysis and documented evidence.</p></div></div>
+<div class="step"><div><h3>Deploy &amp; Optimize</h3><p>Production rollout with CI/CD, monitoring and performance tuning.</p></div></div>
+<div class="step"><div><h3>Transfer &amp; Support</h3><p>Knowledge transfer, documentation and ongoing advisory for your teams.</p></div></div></div>
+<div class="grid"><div class="card"><h3>Security &amp; privacy by design</h3><p>Data handling practices designed around Canadian privacy expectations and your internal policies.</p></div>
+<div class="card"><h3>Standards discipline</h3><p>Coding standards, traceability and review practices suited to regulated industries.</p></div></div></section>
+
+<section class="view" id="industries"><h2>Industries <span class="g">We Serve</span></h2>
+<p class="lead">Where reliability, latency and safety matter most.</p>
+<div class="grid">
+<div class="card"><h3>Automotive &amp; Mobility</h3><p>Perception, ADAS and in-vehicle AI with functional safety rigor.</p></div>
+<div class="card"><h3>Semiconductors &amp; Hardware</h3><p>Runtimes, operators and toolchains for AI accelerator platforms.</p></div>
+<div class="card"><h3>Telecom &amp; Networking</h3><p>Embedded middleware, diagnostics and intelligent network systems.</p></div>
+<div class="card"><h3>Industrial &amp; Robotics</h3><p>Real-time control, vision and ROS-based autonomy.</p></div>
+<div class="card"><h3>Aerospace &amp; Space</h3><p>Real-time operating systems and reliable embedded software.</p></div>
+<div class="card"><h3>Enterprise Software</h3><p>Generative AI platforms, copilots and intelligent automation.</p></div></div></section>
+
+<section class="view" id="contact"><h2>Let's <span class="g">Talk</span></h2>
+<p class="lead">Tell us about your AI initiative. We respond to every inquiry.</p>
+<p><a class="btn" href="mailto:info@niyamtech.ca">info@niyamtech.ca</a></p>
+<form id="f"><input id="n" placeholder="Name" required><input id="c" placeholder="Company" required><input id="e" type="email" placeholder="Work email" required><textarea id="m" rows="5" placeholder="What are you looking to build?" required></textarea><button class="btn" type="submit">Send via Email</button></form>
+<p style="color:var(--mu);font-size:14px">Niyam Tech Inc. &middot; Registered in Canada</p></section>
+</main>
+<footer>&copy; 2026 Niyam Tech Inc. All rights reserved. &middot; info@niyamtech.ca</footer>
+<script>
+const V=[...document.querySelectorAll('.view')],B=[...document.querySelectorAll('nav button')];
+function go(id){V.forEach(v=>v.classList.toggle('on',v.id===id));B.forEach(b=>b.classList.toggle('on',b.dataset.go===id));scrollTo({top:0,behavior:'smooth'})}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)go(t.dataset.go)});
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const g=i=>document.getElementById(i).value;
+location.href='mailto:info@niyamtech.ca?subject='+encodeURIComponent('Inquiry from '+g('c'))+'&body='+encodeURIComponent(g('m')+'\n\n'+g('n')+'\n'+g('c')+'\n'+g('e'))};
+const cv=document.getElementById('fx'),x=cv.getContext('2d');let W,H,P=[];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=Array.from({length:Math.min(70,W/18|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}))}
+rs();addEventListener('resize',rs);
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function d(){x.clearRect(0,0,W,H);const c=getComputedStyle(document.documentElement).getPropertyValue('--a').trim()||'#3d9bff';x.strokeStyle=c;x.fillStyle=c;
+P.forEach((p,i)=>{if(!rm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+x.globalAlpha=.5;x.fillRect(p.x,p.y,2,2);
+for(let j=i+1;j<P.length;j++){const q=P[j],dx=p.x-q.x,dy=p.y-q.y,s=dx*dx+dy*dy;if(s<14000){x.globalAlpha=.16*(1-s/14000);x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});
+if(!rm)requestAnimationFrame(d)}
+d();
+</script></body></html>
